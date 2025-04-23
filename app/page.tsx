@@ -1,3 +1,5 @@
+import styles from "./page.module.css";
+
 async function getAemData() {
   try {
     const res = await fetch(
@@ -26,18 +28,25 @@ export default async function Home() {
   return (
     <div>
       Next.js Static Content
-      <div></div>
       <div
-        className="editable-text"
-        data-aue-resource="urn:aemconnection:/content/test-ue-page/jcr:content/editable_text_node"
-        data-aue-prop="text"
-        data-aue-type="richtext"
-        data-aue-label="Editable Body Text"
-        data-aue-filter="text"
-        dangerouslySetInnerHTML={{
-          __html: data?.editableTextNode?.text || "",
-        }}
-      ></div>
+        className={styles.container}
+        data-aue-type="container"
+        data-aue-resource="urn:aemconnection:/content/test-ue-page/jcr:content/container"
+        data-aue-behavior="component"
+      >
+        <div
+          className={styles.editableText}
+          data-aue-resource="urn:aemconnection:/content/test-ue-page/jcr:content/container/editable_text_node"
+          data-aue-prop="text"
+          data-aue-type="richtext"
+          data-aue-label="Editable Text"
+          data-aue-behavior="component"
+          data-aue-filter="text"
+          dangerouslySetInnerHTML={{
+            __html: data?.container?.editable_text_node?.text || "",
+          }}
+        ></div>
+      </div>
     </div>
   );
 }
