@@ -1,0 +1,38 @@
+{
+  "groups": [
+    {
+      "title": "Available Components",
+      "id": "default",
+      "components": [
+        {
+          "title": "Title Component",
+          "id": "title",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "demo-app/components/title",
+                "template": {
+                  "title": "Title here"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "RichText Component",
+          "id": "richtext",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "demo-app/components/text",
+                "template": {
+                  "text": "Text here"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,22 @@
-export async function getEditableText() {
-  const res = await fetch(
-    "https://localhost:8443/content/test-ue-page.model.json",
-    {
-      headers: {
-        // Use auth if needed:
-        Authorization: "Basic " + Buffer.from("admin:admin").toString("base64"),
-      },
+export async function getAemData() {
+  try {
+    const res = await fetch(
+      "https://localhost:8443/content/test-ue-page.model.json",
+      {
+        headers: {
+          Authorization:
+            "Basic " + Buffer.from("admin:admin").toString("base64"),
+          cache: "no-store", // optional: prevents caching during dev
+        },
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch AEM data");
     }
-  );
 
-  const data = await res.json();
-
-  return {
-    props: { data },
-  };
+    return res.json();
+  } catch (error) {
+    console.error(error);
+  }
 }

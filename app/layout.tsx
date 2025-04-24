@@ -22,6 +22,21 @@ export default function RootLayout({
           src="https://localhost:8000/corslib/LATEST"
           strategy="beforeInteractive"
         />
+        <Script
+          type="application/vnd.adobe.aue.component+json"
+          src="/aem/component-definition.json"
+          strategy="beforeInteractive"
+        />
+        <Script
+          type="application/vnd.adobe.aue.model+json"
+          src="/aem/component-models.json"
+          strategy="beforeInteractive"
+        />
+        <Script
+          type="application/vnd.adobe.aue.filter+json"
+          src="/aem/component-filters.json"
+          strategy="beforeInteractive"
+        />
       </head>
       <body>{children}</body>
     </html>
