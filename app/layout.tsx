@@ -12,8 +12,8 @@ export const metadata: Metadata = {
           ["urn:adobe:aue:config:service"]: "https://localhost:8000",
         }
       : {
-          ["urn:adobe:aue:config:service"]:
-            "https://author-p12074-e30717.adobeaemcloud.com",
+          /*  ["urn:adobe:aue:config:service"]:
+            "https://author-p12074-e30717.adobeaemcloud.com", */
           ["urn:adobe:aue:system:aemconnection"]:
             "aem:https://author-p12074-e30717.adobeaemcloud.com",
         },
@@ -47,7 +47,7 @@ export default function RootLayout({
           src={
             process.env.LOCAL === "1"
               ? "https://localhost:8000/corslib/LATEST"
-              : "https://author-p12074-e30717.adobeaemcloud.com/corslib/LATEST"
+              : "https://universal-editor-service.adobe.io/cors.js"
           }
           strategy="beforeInteractive"
         />
