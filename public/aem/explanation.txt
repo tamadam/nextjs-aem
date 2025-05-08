@@ -1,0 +1,63 @@
+"COMPONENT-DEFINITION.json": 
+
+
+{
+  "groups": [ // groups of components that we see when clicking the Add icon
+    // Group 1
+    {
+      "title": "General Components", // group name
+      "id": "general", // group id
+      "components": [ // components that are belong to the group
+        {
+          "title": "Title Component", // Display name of the component 
+          "id": "title", // component id --> should be same in the models.json where we define the fields also it can be used in the filter
+          "model": "title-id", // model and filter is matching the behaviour that the component describes
+          "filter": "random", // https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/component-definition
+          "plugins": { Configuration for different editor integrations
+            "aem": { Specifies this is for Adobe Experience Manager integration
+              "page": { Configuration for page editor functionality
+                "resourceType": "demo-app/components/title", Path to the AEM component that this corresponds to ("demo-app/components/title")
+                "template": { Default properties/values when this component is added
+                  "title": "Title Default Value" Title Default Value" will be pre-populated when adding this component
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "RichText Component",
+          "id": "richtext",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "demo-app/components/text",
+                "template": {
+                  "text": "Richtext default value"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    // Group 2
+    {
+      "title": "Advanced Components",
+      "id": "advanced",
+      "components": [
+        {
+          "title": "Link",
+          "id": "link",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "demo-app/components/link",
+                "template": {}
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

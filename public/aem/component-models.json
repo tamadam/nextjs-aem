@@ -1,13 +1,130 @@
 [
   {
-    "id": "title",
+    "id": "title-id",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
-        "name": "jcr:title",
+        "name": "title",
         "value": "",
-        "label": "Text yey"
+        "label": "Text"
+      },
+      {
+        "component": "select",
+        "name": "type",
+        "value": "h1",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          { "name": "h1", "value": "h1" },
+          { "name": "h2", "value": "h2" },
+          { "name": "h3", "value": "h3" },
+          { "name": "h4", "value": "h4" },
+          { "name": "h5", "value": "h5" },
+          { "name": "h6", "value": "h6" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "link",
+    "fields": [
+      {
+        "component": "container",
+        "valueType": "string",
+        "label": "Content",
+        "name": "content",
+        "collapsible": false,
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "label",
+            "label": "Label"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "href",
+            "label": "URL"
+          },
+          {
+            "component": "boolean",
+            "valueType": "boolean",
+            "name": "openInNewTab",
+            "label": "Open link in New Tab"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "valueType": "string",
+        "label": "Base Config",
+        "name": "baseConfig",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "select",
+            "label": "Type",
+            "name": "type",
+            "valueType": "string",
+            "options": [
+              { "name": "Link", "value": "link" },
+              { "name": "Button", "value": "button" }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Link configuration",
+            "name": "link-config",
+            "valueType": "string",
+            "condition": { "===": [{ "var": "type" }, "link"] },
+            "fields": [
+              {
+                "component": "select",
+                "label": "Link variant",
+                "name": "link-variant",
+                "valueType": "string",
+                "value": "default",
+                "options": [
+                  { "name": "Default", "value": "default" },
+                  { "name": "Quiet", "value": "quiet" }
+                ]
+              },
+              {
+                "component": "select",
+                "label": "Link color",
+                "name": "link-color",
+                "valueType": "string",
+                "value": "green",
+                "options": [
+                  { "name": "Green", "value": "green" },
+                  { "name": "Red", "value": "red" }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Button configuration",
+            "name": "button-config",
+            "valueType": "string",
+            "condition": { "===": [{ "var": "type" }, "button"] },
+            "fields": [
+              {
+                "component": "select",
+                "label": "Button Type",
+                "name": "button-type",
+                "valueType": "string",
+                "value": "primary",
+                "options": [
+                  { "name": "Primary", "value": "primary" },
+                  { "name": "Secondary", "value": "secondary" }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

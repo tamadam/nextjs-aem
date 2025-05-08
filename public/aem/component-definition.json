@@ -1,8 +1,8 @@
 {
   "groups": [
     {
-      "title": "Available Components",
-      "id": "default",
+      "title": "General Components",
+      "id": "general",
       "components": [
         {
           "title": "Title Component",
@@ -12,7 +12,7 @@
               "page": {
                 "resourceType": "demo-app/components/title",
                 "template": {
-                  "title": "Title here"
+                  "title": "Title Default Value"
                 }
               }
             }
@@ -26,7 +26,33 @@
               "page": {
                 "resourceType": "demo-app/components/text",
                 "template": {
-                  "text": "Text here"
+                  "text": "Richtext default value"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Advanced Components",
+      "id": "advanced",
+      "components": [
+        {
+          "title": "Link",
+          "id": "link",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "demo-app/components/link",
+                "template": {
+                  "label": "Link",
+                  "href": "#",
+                  "openInNewTab": true,
+                  "type": "link",
+                  "link-color": "green",
+                  "link-variant": "default",
+                  "button-type": "primary"
                 }
               }
             }

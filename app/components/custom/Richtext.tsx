@@ -1,5 +1,5 @@
 import React from "react";
-import { BASE_CONTAINER_PATH } from "../constants";
+import { BASE_CONTAINER_PATH } from "../../constants";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const RichtextComponent = ({ data, itemKey }: any) => {

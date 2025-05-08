@@ -1,5 +1,5 @@
 import React from "react";
-import { BASE_CONTAINER_PATH } from "../constants";
+import { BASE_CONTAINER_PATH } from "../../constants";
 
 // Component to render text content
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -12,8 +12,8 @@ const TitleComponent = ({ data, itemKey }: any) => {
       data-aue-resource={`urn:aemconnection:${path}`}
       data-aue-type="text"
       data-aue-prop="title"
-      data-aue-label="Title"
-      data-aue-model="title"
+      data-aue-label="Title label"
+      data-aue-model="title-id"
       data-aue-behavior="component"
     />
   );

@@ -18,23 +18,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
-          src="https://localhost:8000/corslib/LATEST"
-          strategy="beforeInteractive"
-        />
-        <Script
+        <script
           type="application/vnd.adobe.aue.component+json"
           src="/aem/component-definition.json"
-          strategy="beforeInteractive"
-        />
-        <Script
+          async
+        ></script>
+        <script
           type="application/vnd.adobe.aue.model+json"
           src="/aem/component-models.json"
-          strategy="beforeInteractive"
-        />
-        <Script
+          async
+        ></script>
+        <script
           type="application/vnd.adobe.aue.filter+json"
           src="/aem/component-filters.json"
+          async
+        ></script>
+
+        <Script
+          src="https://localhost:8000/corslib/LATEST"
           strategy="beforeInteractive"
         />
       </head>
