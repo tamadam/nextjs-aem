@@ -1,17 +1,17 @@
-//import tokenData from "../tokens/token.json";
-
 export async function getAemData() {
   const token = process.env.TOKEN;
-  console.log(token);
-  const accessToken = token;
 
   try {
     const res = await fetch(
-      "https://author-p12074-e30717.adobeaemcloud.com/content/test-ue-page.-1.json",
-      //"https://localhost:8443/content/test-ue-page.model.json",
+      process.env.LOCAL === "1"
+        ? "https://localhost:8443/content/test-ue-page.model.json"
+        : "https://author-p12074-e30717.adobeaemcloud.com/content/test-ue-page.-1.json",
       {
         headers: {
-          Authorization: `Bearer ${accessToken}`,
+          Authorization:
+            process.env.LOCAL === "1"
+              ? "Basic " + Buffer.from("admin:admin").toString("base64")
+              : `Bearer ${token}`,
           cache: "no-store",
         },
       }
