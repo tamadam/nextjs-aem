@@ -1,13 +1,13 @@
 import { getAemData } from "@/lib/aem-service";
-import Container from "./components/Container";
+//import Container from "./components/Container";
 
 export default async function Home() {
   const data = await getAemData();
-
+  console.log(data);
   return (
     <div>
       Next.js Static Content
-      <Container data={data.container} />
+      {/*  <Container data={data.container} /> */}
     </div>
   );
 }
