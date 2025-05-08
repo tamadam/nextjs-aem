@@ -7,6 +7,7 @@ export default async function Home() {
   return (
     <div>
       Next.js Static Content
+      {data ? "There is data" : "No data"}
       {/*  <Container data={data.container} /> */}
     </div>
   );
