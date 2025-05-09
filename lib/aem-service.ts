@@ -12,8 +12,8 @@ export async function getAemData() {
             process.env.LOCAL === "1"
               ? "Basic " + Buffer.from("admin:admin").toString("base64")
               : `Bearer ${token}`,
-          cache: "no-store",
         },
+        cache: "no-store",
       }
     );
 
