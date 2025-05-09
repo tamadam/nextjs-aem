@@ -5,7 +5,7 @@ export async function getAemData() {
     const res = await fetch(
       process.env.LOCAL === "1"
         ? "https://localhost:8443/content/test-ue-page.model.json"
-        : "https://author-p12074-e30717.adobeaemcloud.com/content/test-ue-page.-1.json",
+        : "https://author-p12074-e30717.adobeaemcloud.com/content/test-ue-page.model.json",
       {
         headers: {
           Authorization:
