@@ -1,23 +1,18 @@
 import { getAemData } from "@/lib/aem-service";
 import Container from "./components/Container";
-//import Container from "./components/Container";
 
 export default async function Home() {
   const data = await getAemData();
-  console.log(data);
+
   return (
     <div>
       Next.js Static Content:
       {data ? " Fetch from AEM was successful" : " Feth from AEM failed"}
-      {process.env.LOCAL === "1" ? (
-        <Container data={data.container} />
-      ) : (
-        <BasicTemplate />
-      )}
+      <Container data={data.container} />
     </div>
   );
 }
-
+/* 
 const BasicTemplate = () => {
   return (
     <div
@@ -41,4 +36,4 @@ const BasicTemplate = () => {
       </div>
     </div>
   );
-};
+}; */
