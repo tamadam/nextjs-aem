@@ -17,6 +17,8 @@ export async function getAemData() {
       }
     );
 
+    console.log("after fetch");
+
     if (!res.ok) {
       throw new Error(
         `Failed to fetch AEM data ${res.status} ${res.statusText}`
