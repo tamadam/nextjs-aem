@@ -1,6 +1,8 @@
 import { getAemData } from "@/lib/aem-service";
 import Container from "./components/Container";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const data = await getAemData();
 
