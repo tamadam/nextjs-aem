@@ -8,6 +8,7 @@ export default async function Page({
 }: {
   params: { slug?: string[] };
 }) {
+  console.log(params.slug);
   const slugPath = params.slug?.join("/") || "";
   const fullPath = `/content/${slugPath}`;
   const data = await getAemData(fullPath);
