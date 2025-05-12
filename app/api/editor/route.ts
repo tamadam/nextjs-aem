@@ -19,7 +19,6 @@ export async function GET(req: NextRequest) {
 
   const fullUrl = `${domain}${slug}.model.json`;
 
-  return NextResponse.json({ futureUrl: fullUrl });
   try {
     const res = await fetch(fullUrl, {
       headers: {
