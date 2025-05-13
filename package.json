@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@adobe/universal-editor-cors": "^2.3.7",
+    "@carbon/react": "^1.72.0",
     "@ni/circuit-styles": "^0.0.2",
     "axios": "^1.8.4",
     "clsx": "^2.1.1",
