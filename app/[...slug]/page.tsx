@@ -6,9 +6,13 @@ import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
+  searchParams,
 }: {
   params: { slug?: string[] };
+  searchParams: { [key: string]: string | undefined };
 }) {
+  // for future usage like ?editor=true
+  console.log(searchParams);
   const slugPath = params.slug?.join("/") || "";
   const containerPath = getContainerPath(slugPath);
 

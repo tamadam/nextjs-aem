@@ -3,4 +3,18 @@
 
 body {
   margin: 0;
+  --global-max-content-width: 99rem;
+  --global-horizontal-padding: 1.2em;
+}
+
+@media (min-width: 320px) {
+  body {
+    --global-horizontal-padding: 2em;
+  }
+}
+
+@media (min-width: 672px) {
+  body {
+    --global-horizontal-padding: 4em;
+  }
 }
