@@ -2,15 +2,14 @@
 import React from "react";
 
 import DynamicComponent from "./DynamicComponent";
-import { BASE_CONTAINER_PATH } from "../constants";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Container = ({ data }: any) => {
+const Container = ({ data, baseContainerPath }: any) => {
   return (
     <div
       data-aue-type="container"
       data-aue-label="Container"
-      data-aue-resource={`urn:aemconnection:${BASE_CONTAINER_PATH}`}
+      data-aue-resource={`urn:aemconnection:${baseContainerPath}`}
       data-aue-filter="container-filter"
       style={{ padding: "1rem", border: "1px solid red", marginBlock: "1rem" }}
     >

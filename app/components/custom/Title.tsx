@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { BASE_CONTAINER_PATH } from "../../constants";
 
@@ -5,7 +6,8 @@ import { BASE_CONTAINER_PATH } from "../../constants";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const TitleComponent = ({ data, itemKey }: any) => {
   const TitleTag = data.type || "h2"; // not works yet
-  const path = `${BASE_CONTAINER_PATH}/${itemKey}`;
+  /* const path = `${BASE_CONTAINER_PATH}/${itemKey}`; */
+  const path = data[":path"];
   return (
     <TitleTag
       dangerouslySetInnerHTML={data.title ? { __html: data.title } : null}

@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
 
-import { getAemData } from "@/lib/aem-service";
+import { getAemData, getContainerPath } from "@/lib/aem-service";
 import Container from "../components/Container";
 
 export default async function Page({
@@ -8,8 +8,9 @@ export default async function Page({
 }: {
   params: { slug?: string[] };
 }) {
-  console.log(params.slug);
   const slugPath = params.slug?.join("/") || "";
+  const containerPath = getContainerPath(slugPath);
+
   const fullPath = `/content/${slugPath}`;
   const data = await getAemData(fullPath);
 
@@ -17,7 +18,7 @@ export default async function Page({
     <div>
       Next.js Dynamic Page:
       {data ? " Fetch from AEM was successful" : " Fetch from AEM failed"}
-      <Container data={data.container} />
+      <Container data={data.container} baseContainerPath={containerPath} />
     </div>
   );
 }
