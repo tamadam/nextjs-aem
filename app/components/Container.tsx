@@ -11,7 +11,6 @@ const Container = ({ data, baseContainerPath }: any) => {
       data-aue-label="Container"
       data-aue-resource={`urn:aemconnection:${baseContainerPath}`}
       data-aue-filter="container-filter"
-      style={{ padding: "1rem", border: "1px solid red", marginBlock: "1rem" }}
     >
       {data[":itemsOrder"] &&
         data[":itemsOrder"].map((itemKey: any, index: number) => {
