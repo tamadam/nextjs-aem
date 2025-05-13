@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 
 import { getAemData, getContainerPath } from "@/lib/aem-service";
 import Container from "../components/Container";
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -12,13 +13,22 @@ export default async function Page({
   const containerPath = getContainerPath(slugPath);
 
   const fullPath = `/content/${slugPath}`;
-  const data = await getAemData(fullPath);
+  const result = await getAemData(fullPath);
+  if (result?.notFound) {
+    notFound();
+  }
+
+  if (result?.error || !result?.data) {
+    return <div>Something went wrong while fetching the page.</div>; // fallback UI
+  }
 
   return (
     <div>
       Next.js Dynamic Page:
-      {data ? " Fetch from AEM was successful" : " Fetch from AEM failed"}
-      <Container data={data.container} baseContainerPath={containerPath} />
+      <Container
+        data={result.data.container}
+        baseContainerPath={containerPath}
+      />
     </div>
   );
 }

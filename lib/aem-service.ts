@@ -55,15 +55,20 @@ export async function getAemDataOld() {
       }
     );
 
+    if (res.status === 404) {
+      return { notFound: true };
+    }
+
     if (!res.ok) {
       throw new Error(
         `Failed to fetch AEM data ${res.status} ${res.statusText}`
       );
     }
 
-    return res.json();
+    const json = await res.json();
+    return { data: json };
   } catch (error) {
     console.error("Error fetching AEM data:", error);
-    return null;
+    return { error: true };
   }
 }
