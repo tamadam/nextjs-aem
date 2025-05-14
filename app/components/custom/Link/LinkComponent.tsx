@@ -1,17 +1,21 @@
+"use client";
+
+import { Button } from "@carbon/react";
 import styles from "./LinkComponent.module.css";
 import clsx from "clsx";
+import NiLink from "../../carbon/custom-link";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const LinkComponent = ({ data }: any) => {
   const path = data[":path"];
+
   const {
     type = "link",
     label = <span>Link</span>,
     href = "#",
     openInNewTab = false,
     "link-variant": linkVariant = "default",
-    "link-color": linkColor = "green",
-    "button-type": buttonType = "primary",
+    "button-type": buttonType = "default",
   } = data;
 
   const target = openInNewTab ? "_blank" : undefined;
@@ -24,20 +28,26 @@ const LinkComponent = ({ data }: any) => {
     // Link variants
     [styles.linkDefault]: type === "link" && linkVariant === "default",
     [styles.linkQuiet]: type === "link" && linkVariant === "quiet",
-
-    // Link colors
-    [styles.linkGreen]: type === "link" && linkColor === "green",
-    [styles.linkRed]: type === "link" && linkColor === "red",
-
-    // Button types
-    [styles.buttonPrimary]: type === "button" && buttonType === "primary",
-    [styles.buttonSecondary]: type === "button" && buttonType === "secondary",
-    [styles.buttonOutline]: type === "button" && buttonType === "outline",
   });
 
+  if (type === "button") {
+    return (
+      <Button
+        kind={buttonType !== "default" ? buttonType : undefined}
+        data-aue-resource={`urn:aemconnection:${path}`}
+        data-aue-type="component"
+        data-aue-model="link"
+        data-aue-label="Link"
+      >
+        <a href={href} target={target} className={styles.linkAsButton}>
+          {label}
+        </a>
+      </Button>
+    );
+  }
+
   return (
-    <a
-      dangerouslySetInnerHTML={{ __html: label }}
+    <NiLink
       data-aue-resource={`urn:aemconnection:${path}`}
       data-aue-type="component"
       data-aue-model="link"
@@ -45,7 +55,9 @@ const LinkComponent = ({ data }: any) => {
       className={classes}
       href={href}
       target={target}
-    />
+    >
+      {label}
+    </NiLink>
   );
 };
 

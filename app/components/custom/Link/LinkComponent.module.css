@@ -1,8 +1,6 @@
 /* Base link styles */
 .link {
   display: inline-flex;
-  align-items: center;
-  transition: color 0.2s ease;
 }
 
 /* Link variants */
@@ -20,58 +18,7 @@
   text-decoration: underline;
 }
 
-/* Link colors */
-.linkGreen {
-  color: #16a34a;
-}
-.linkGreen:hover {
-  color: #166534;
-}
-
-.linkRed {
-  color: #dc2626;
-}
-.linkRed:hover {
-  color: #991b1b;
-}
-
-/* Base button styles */
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-/* Button types */
-.buttonPrimary {
-  background-color: #2563eb;
-  color: white;
-  border: none;
-}
-.buttonPrimary:hover {
-  background-color: #1d4ed8;
-}
-
-.buttonSecondary {
-  background-color: #4b5563;
-  color: white;
-  border: none;
-}
-.buttonSecondary:hover {
-  background-color: #374151;
-}
-
-.buttonOutline {
-  background-color: transparent;
-  border: 1px solid #2563eb;
-  color: #2563eb;
-}
-.buttonOutline:hover {
-  background-color: #eff6ff;
+.linkAsButton {
+  all: unset;
+  display: block;
 }

@@ -124,17 +124,6 @@
                   { "name": "Default", "value": "default" },
                   { "name": "Quiet", "value": "quiet" }
                 ]
-              },
-              {
-                "component": "select",
-                "label": "Link color",
-                "name": "link-color",
-                "valueType": "string",
-                "value": "green",
-                "options": [
-                  { "name": "Green", "value": "green" },
-                  { "name": "Red", "value": "red" }
-                ]
               }
             ]
           },
@@ -152,8 +141,11 @@
                 "valueType": "string",
                 "value": "primary",
                 "options": [
-                  { "name": "Primary", "value": "primary" },
-                  { "name": "Secondary", "value": "secondary" }
+                  { "name": "Default", "value": "default" },
+                  { "name": "Danger", "value": "danger" },
+                  { "name": "Ghost", "value": "ghost" },
+                  { "name": "Secondary", "value": "secondary" },
+                  { "name": "Tertiary", "value": "tertiary" }
                 ]
               }
             ]

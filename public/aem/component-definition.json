@@ -55,9 +55,8 @@
                   "href": "#",
                   "openInNewTab": true,
                   "type": "link",
-                  "link-color": "green",
                   "link-variant": "default",
-                  "button-type": "primary"
+                  "button-type": "default"
                 }
               }
             }
