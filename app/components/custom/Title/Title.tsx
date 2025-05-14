@@ -35,11 +35,9 @@ const TitleComponent = ({ data }: any) => {
       className={classes}
       dangerouslySetInnerHTML={title ? { __html: title } : null}
       data-aue-resource={`urn:aemconnection:${path}`}
-      data-aue-type="text"
-      data-aue-prop="title"
+      data-aue-type="component"
       data-aue-label="Title"
       data-aue-model="title"
-      data-aue-behavior="component"
     />
   );
 };

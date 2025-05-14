@@ -6,7 +6,7 @@ const LinkComponent = ({ data }: any) => {
   const path = data[":path"];
   const {
     type = "link",
-    label = <p>Default</p>,
+    label = <span>Link</span>,
     href = "#",
     openInNewTab = false,
     "link-variant": linkVariant = "default",
@@ -39,11 +39,9 @@ const LinkComponent = ({ data }: any) => {
     <a
       dangerouslySetInnerHTML={{ __html: label }}
       data-aue-resource={`urn:aemconnection:${path}`}
-      data-aue-type="link"
-      data-aue-prop="label"
+      data-aue-type="component"
       data-aue-model="link"
       data-aue-label="Link"
-      data-aue-behavior="component"
       className={classes}
       href={href}
       target={target}
