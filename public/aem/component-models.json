@@ -161,5 +161,23 @@
         ]
       }
     ]
+  },
+  {
+    "id": "richtext",
+    "fields": [
+      {
+        "component": "select",
+        "name": "color",
+        "value": "normal",
+        "label": "Text Color",
+        "valueType": "string",
+        "options": [
+          { "name": "Default", "value": "black" },
+          { "name": "Charcoal", "value": "charcoal" },
+          { "name": "Light Grey", "value": "lightgrey" },
+          { "name": "Digital Green", "value": "niDigitalGreen" }
+        ]
+      }
+    ]
   }
 ]

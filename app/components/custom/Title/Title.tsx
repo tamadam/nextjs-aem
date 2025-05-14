@@ -3,7 +3,6 @@ import styles from "./Title.module.scss";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const TitleComponent = ({ data }: any) => {
-  console.log(data);
   const path = data[":path"];
   const {
     title,

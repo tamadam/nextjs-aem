@@ -5,7 +5,7 @@
       "id": "general",
       "components": [
         {
-          "title": "Title Component",
+          "title": "Title",
           "id": "title",
           "plugins": {
             "aem": {
@@ -23,14 +23,15 @@
           }
         },
         {
-          "title": "RichText Component",
+          "title": "Richtext",
           "id": "richtext",
           "plugins": {
             "aem": {
               "page": {
-                "resourceType": "demo-app/components/text",
+                "resourceType": "demo-app/components/richtext",
                 "template": {
-                  "text": "Richtext default value"
+                  "text": "Richtext",
+                  "color": "black"
                 }
               }
             }

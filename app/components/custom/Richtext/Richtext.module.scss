@@ -1,0 +1,17 @@
+.richtext {
+  strong {
+    font-weight: 600;
+  }
+
+  &.charcoal {
+    color: #333333;
+  }
+
+  &.lightGrey {
+    color: #757575;
+  }
+
+  &.niDigitalGreen {
+    color: #006c46;
+  }
+}
