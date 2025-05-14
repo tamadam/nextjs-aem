@@ -12,7 +12,11 @@
               "page": {
                 "resourceType": "demo-app/components/title",
                 "template": {
-                  "title": "Title Default Value"
+                  "title": "Title",
+                  "type": "h1",
+                  "weight": "normal",
+                  "color": "black",
+                  "text-transform": "none"
                 }
               }
             }

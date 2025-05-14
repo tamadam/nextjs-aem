@@ -1,19 +1,18 @@
 [
   {
-    "id": "title-id",
+    "id": "title",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
         "name": "title",
-        "value": "",
-        "label": "Text"
+        "label": "Title Text"
       },
       {
         "component": "select",
         "name": "type",
         "value": "h1",
-        "label": "Type",
+        "label": "Title Type",
         "valueType": "string",
         "options": [
           { "name": "h1", "value": "h1" },
@@ -22,6 +21,41 @@
           { "name": "h4", "value": "h4" },
           { "name": "h5", "value": "h5" },
           { "name": "h6", "value": "h6" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "weight",
+        "value": "normal",
+        "label": "Title Weight",
+        "valueType": "string",
+        "options": [
+          { "name": "Normal", "value": "normal" },
+          { "name": "Bold", "value": "bold" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "color",
+        "value": "normal",
+        "label": "Title Color",
+        "valueType": "string",
+        "options": [
+          { "name": "Default", "value": "black" },
+          { "name": "Charcoal", "value": "charcoal" },
+          { "name": "Digital Green", "value": "niDigitalGreen" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "text-transform",
+        "value": "none",
+        "label": "Text Treatment",
+        "valueType": "string",
+        "options": [
+          { "name": "None", "value": "none" },
+          { "name": "Lowercase", "value": "lowercase" },
+          { "name": "Uppercase", "value": "uppercase" }
         ]
       }
     ]

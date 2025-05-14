@@ -1,0 +1,29 @@
+.title {
+  color: black; // default color
+  text-transform: none; // default text-transform
+  margin-block: 1rem;
+
+  &.weightNormal {
+    font-weight: 400;
+  }
+
+  &.weightBold {
+    font-weight: 600;
+  }
+
+  &.charcoal {
+    color: #333333;
+  }
+
+  &.niDigitalGreen {
+    color: #006c46;
+  }
+
+  &.lowercase {
+    text-transform: lowercase;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}

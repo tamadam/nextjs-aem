@@ -1,6 +1,6 @@
 import LinkComponent from "@/app/components/custom/Link/LinkComponent";
 import RichtextComponent from "@/app/components/custom/Richtext";
-import TitleComponent from "@/app/components/custom/Title";
+import TitleComponent from "@/app/components/custom/Title/Title";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const componentMap: any = {

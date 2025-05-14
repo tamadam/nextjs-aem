@@ -7,8 +7,6 @@ export async function getAemData(slugPath: string) {
 
   const url = `${baseUrl}${slugPath}.model.json`;
 
-  console.log("FETCHURL: ", url);
-
   try {
     const res = await fetch(url, {
       headers: {
