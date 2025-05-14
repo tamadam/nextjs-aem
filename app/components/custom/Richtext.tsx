@@ -1,10 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
-import { BASE_CONTAINER_PATH } from "../../constants";
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const RichtextComponent = ({ data, itemKey }: any) => {
-  /* const path = `${BASE_CONTAINER_PATH}/${itemKey}`; */
+const RichtextComponent = ({ data }: any) => {
   const path = data[":path"];
   return (
     <div

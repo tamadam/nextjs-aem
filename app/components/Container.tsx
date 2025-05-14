@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
+
 import styles from "./Container.module.scss";
 
 import DynamicComponent from "./DynamicComponent";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Container = ({ data, baseContainerPath }: any) => {
   return (
     <div

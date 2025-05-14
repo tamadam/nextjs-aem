@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 export const dynamic = "force-dynamic";
 
 import { getAemData, getContainerPath } from "@/lib/aem-service";
@@ -12,7 +13,7 @@ export default async function Page({
   searchParams: { [key: string]: string | undefined };
 }) {
   // for future usage like ?editor=true
-  console.log(searchParams);
+  // console.log(searchParams);
   const slugPath = params.slug?.join("/") || "";
   const containerPath = getContainerPath(slugPath);
 

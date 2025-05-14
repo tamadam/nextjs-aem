@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.scss";
 import NiWrapper from "./components/carbon/ni-wrapper";
-import TmpclientComponent from "./components/carbon/tmp-client-cmp";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -56,10 +55,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <NiWrapper>
-          {children}
-          <TmpclientComponent />
-        </NiWrapper>
+        <NiWrapper>{children}</NiWrapper>
       </body>
     </html>
   );

@@ -1,13 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
-import { BASE_CONTAINER_PATH } from "../../../constants";
 import styles from "./LinkComponent.module.css";
 import clsx from "clsx";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const LinkComponent = ({ data, itemKey }: any) => {
-  console.log(data[":path"]);
-  //const path = `${BASE_CONTAINER_PATH}/${itemKey}`;
+const LinkComponent = ({ data }: any) => {
   const path = data[":path"];
   const {
     type = "link",
