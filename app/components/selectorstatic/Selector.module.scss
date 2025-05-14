@@ -1,0 +1,38 @@
+.selectorWrapper {
+  padding-inline: var(--global-horizontal-padding);
+
+  max-inline-size: var(--global-max-content-width);
+  margin-inline: auto;
+  margin-block-start: 1rem;
+  border-top: 1px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 5vw, 4rem);
+  font-family: "FoundersGrotesk", "Helvetica", Arial, sans-serif;
+
+  .selectorTitle {
+    color: #161616;
+    font-size: 18px;
+  }
+
+  .selectorItems {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 14px;
+    color: #525252;
+
+    .item {
+      padding-block: 2rem;
+      padding-inline: 0.4rem;
+      &.active {
+        color: #008053;
+        font-weight: 600;
+        border-bottom: 1px solid #008053;
+      }
+    }
+  }
+
+  .selectorButton {
+  }
+}

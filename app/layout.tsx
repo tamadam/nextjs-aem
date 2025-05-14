@@ -55,7 +55,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <NiWrapper>{children}</NiWrapper>
+        <NiWrapper>
+          <main>{children}</main>
+        </NiWrapper>
       </body>
     </html>
   );

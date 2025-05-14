@@ -4,6 +4,7 @@ export const dynamic = "force-dynamic";
 import { getAemData, getContainerPath } from "@/lib/aem-service";
 import Container from "../components/Container";
 import { notFound } from "next/navigation";
+import Selector from "../components/selectorstatic/Selector";
 
 export default async function Page({
   params,
@@ -29,7 +30,7 @@ export default async function Page({
 
   return (
     <div>
-      Next.js Dynamic Page:
+      <Selector />
       <Container
         data={result.data.container}
         baseContainerPath={containerPath}
