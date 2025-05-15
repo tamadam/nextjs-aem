@@ -33,6 +33,7 @@ const Text = ({ data }: any) => {
 
     // Margin block
     [styles.verticalSpacingNone]: verticalSpacing === "none",
+    [styles.verticalSpacingVerySmall]: verticalSpacing === "verysmall",
     [styles.verticalSpacingSmall]: verticalSpacing === "small",
     [styles.verticalSpacingMedium]: verticalSpacing === "medium",
     [styles.verticalSpacingLarge]: verticalSpacing === "large",
