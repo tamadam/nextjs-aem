@@ -1,3 +1,4 @@
+import FlexContainer from "@/app/components/custom/FlexContainer/FlexContainer";
 import LinkComponent from "@/app/components/custom/Link/LinkComponent";
 import RichtextComponent from "@/app/components/custom/Richtext/Richtext";
 import TitleComponent from "@/app/components/custom/Title/Title";
@@ -7,4 +8,5 @@ export const componentMap: any = {
   "demo-app/components/title": TitleComponent,
   "demo-app/components/richtext": RichtextComponent,
   "demo-app/components/link": LinkComponent,
+  "demo-app/components/flexcontainer": FlexContainer,
 };

@@ -36,6 +36,23 @@
               }
             }
           }
+        },
+        {
+          "title": "FlexContainer",
+          "id": "flexcontainer",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "demo-app/components/flexcontainer",
+                "template": {
+                  "flex-direction": "row",
+                  "flex-wrap": "nowrap",
+                  "flex-align": "stretch",
+                  "flex-justify": "flexStart"
+                }
+              }
+            }
+          }
         }
       ]
     },

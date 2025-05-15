@@ -1,6 +1,6 @@
 [
   {
     "id": "container-filter",
-    "components": ["title", "richtext", "link"]
+    "components": ["title", "richtext", "link", "flexcontainer"]
   }
 ]

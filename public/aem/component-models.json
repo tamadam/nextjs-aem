@@ -171,5 +171,65 @@
         ]
       }
     ]
+  },
+  {
+    "id": "flexcontainer",
+    "fields": [
+      {
+        "component": "select",
+        "name": "flex-direction",
+        "value": "row",
+        "label": "Flex Direction",
+        "valueType": "string",
+        "options": [
+          { "name": "Row", "value": "row" },
+          { "name": "Row (Reversed)", "value": "rowReverse" },
+          { "name": "Column", "value": "column" },
+          { "name": "Column (Reversed)", "value": "columnReverse" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "flex-wrap",
+        "value": "nowrap",
+        "label": "Flex Wrap",
+        "valueType": "string",
+        "options": [
+          { "name": "No Wrap", "value": "nowrap" },
+          { "name": "Wrap", "value": "wrap" },
+          { "name": "Wrap Reverse", "value": "wrapReverse" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "flex-align",
+        "value": "stretch",
+        "label": "Align Items",
+        "valueType": "string",
+        "options": [
+          { "name": "Stretch", "value": "stretch" },
+          { "name": "Start", "value": "flexStart" },
+          { "name": "Center", "value": "center" },
+          { "name": "End", "value": "flexEnd" },
+          { "name": "Space Around", "value": "spaceAround" },
+          { "name": "Baseline", "value": "baseline" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "flex-justify",
+        "value": "flexStart",
+        "label": "Justify Content",
+        "valueType": "string",
+        "options": [
+          { "name": "Start", "value": "flexStart" },
+          { "name": "Center", "value": "center" },
+          { "name": "End", "value": "flexEnd" },
+          { "name": "Space Between", "value": "spaceBetween" },
+          { "name": "Space Around", "value": "spaceAround" },
+          { "name": "Space Evenly", "value": "spaceEvenly" }
+        ]
+      }
+    ]
   }
 ]
