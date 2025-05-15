@@ -6,7 +6,7 @@ import { CSSProperties } from "react";
 
 const GridContainer = ({ data }: any) => {
   const path = data[":path"];
-  console.log(data);
+
   const {
     "ideal-column-size": idealColumnSize = "20rem",
     "max-column-count": maxColumnCount = 3,
