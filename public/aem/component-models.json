@@ -345,5 +345,9 @@
         ]
       }
     ]
+  },
+  {
+    "id": "pricingcard",
+    "fields": []
   }
 ]

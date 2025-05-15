@@ -6,7 +6,12 @@
       "richtext",
       "link",
       "flexcontainer",
-      "gridcontainer"
+      "gridcontainer",
+      "pricingcard"
     ]
+  },
+  {
+    "id": "pricing-card-filter",
+    "components": ["title", "richtext", "link"]
   }
 ]

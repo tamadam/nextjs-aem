@@ -61,7 +61,7 @@
     },
     {
       "title": "Container Components",
-      "id": "advanced",
+      "id": "containers",
       "components": [
         {
           "title": "Flex Container",
@@ -94,6 +94,18 @@
                   "max-column-count": 3,
                   "item-gap": "0rem"
                 }
+              }
+            }
+          }
+        },
+        {
+          "title": "Pricing Card",
+          "id": "pricingcard",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "demo-app/components/pricingcard",
+                "template": {}
               }
             }
           }

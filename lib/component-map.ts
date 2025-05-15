@@ -1,6 +1,7 @@
 import FlexContainer from "@/app/components/custom/FlexContainer/FlexContainer";
 import GridContainer from "@/app/components/custom/GridContainer/GridContainer";
 import LinkComponent from "@/app/components/custom/Link/LinkComponent";
+import PricingCard from "@/app/components/custom/PricingCard/PricingCard";
 import RichtextComponent from "@/app/components/custom/Richtext/Richtext";
 import TitleComponent from "@/app/components/custom/Title/Title";
 
@@ -11,4 +12,5 @@ export const componentMap: any = {
   "demo-app/components/link": LinkComponent,
   "demo-app/components/flexcontainer": FlexContainer,
   "demo-app/components/gridcontainer": GridContainer,
+  "demo-app/components/pricingcard": PricingCard,
 };
