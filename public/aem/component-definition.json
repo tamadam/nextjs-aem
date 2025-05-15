@@ -44,6 +44,25 @@
           }
         },
         {
+          "title": "Text",
+          "id": "text",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "demo-app/components/text",
+                "template": {
+                  "text": "Text",
+                  "text-size": "base",
+                  "weight": "normal",
+                  "color": "black",
+                  "text-transform": "none",
+                  "vertical-spacing": "none"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Richtext",
           "id": "richtext",
           "plugins": {

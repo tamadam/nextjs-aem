@@ -7,11 +7,12 @@
       "link",
       "flexcontainer",
       "gridcontainer",
-      "pricingcard"
+      "pricingcard",
+      "text"
     ]
   },
   {
     "id": "pricing-card-filter",
-    "components": ["title", "richtext", "link"]
+    "components": ["title", "richtext", "link", "text"]
   }
 ]

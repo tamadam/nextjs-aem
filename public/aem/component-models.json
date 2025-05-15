@@ -176,6 +176,80 @@
     ]
   },
   {
+    "id": "text",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "text-size",
+        "label": "Text Size",
+        "value": "base",
+        "options": [
+          { "name": "XS", "value": "xs" },
+          { "name": "S", "value": "s" },
+          { "name": "Base", "value": "base" },
+          { "name": "L", "value": "l" },
+          { "name": "XL", "value": "xl" },
+          { "name": "2XL", "value": "2xl" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "weight",
+        "value": "normal",
+        "label": "Text Weight",
+        "valueType": "string",
+        "options": [
+          { "name": "Normal", "value": "normal" },
+          { "name": "Bold", "value": "bold" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "color",
+        "value": "normal",
+        "label": "Text Color",
+        "valueType": "string",
+        "options": [
+          { "name": "Default", "value": "black" },
+          { "name": "Charcoal", "value": "charcoal" },
+          { "name": "Digital Green", "value": "niDigitalGreen" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "text-transform",
+        "value": "none",
+        "label": "Text Treatment",
+        "valueType": "string",
+        "options": [
+          { "name": "None", "value": "none" },
+          { "name": "Lowercase", "value": "lowercase" },
+          { "name": "Uppercase", "value": "uppercase" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "vertical-spacing",
+        "value": "none",
+        "label": "Vertical Spacing",
+        "valueType": "string",
+        "options": [
+          { "name": "None", "value": "none" },
+          { "name": "Small", "value": "small" },
+          { "name": "Medium", "value": "medium" },
+          { "name": "Large", "value": "large" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "richtext",
     "fields": [
       {

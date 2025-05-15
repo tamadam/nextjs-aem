@@ -1,0 +1,66 @@
+.text {
+  &.weightNormal {
+    font-weight: 400;
+  }
+
+  &.weightBold {
+    font-weight: 600;
+  }
+
+  &.charcoal {
+    color: #333333;
+  }
+
+  &.niDigitalGreen {
+    color: #006c46;
+  }
+
+  &.lowercase {
+    text-transform: lowercase;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  // Margin block
+  &.verticalSpacingNone {
+    margin-block: 0;
+  }
+
+  &.verticalSpacingSmall {
+    margin-block: 16px;
+  }
+
+  &.verticalSpacingMedium {
+    margin-block: 24px;
+  }
+
+  &.verticalSpacingLarge {
+    margin-block: 32px;
+  }
+
+  &.fontSizeXS {
+    font-size: 0.6rem;
+  }
+
+  &.fontSizeS {
+    font-size: 0.875rem;
+  }
+
+  &.fontSizeBase {
+    font-size: 1rem;
+  }
+
+  &.fontSizeL {
+    font-size: 1.25rem;
+  }
+
+  &.fontSizeXL {
+    font-size: 1.5rem;
+  }
+
+  &.fontSize2XL {
+    font-size: 2rem;
+  }
+}
