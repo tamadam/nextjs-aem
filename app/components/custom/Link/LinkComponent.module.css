@@ -26,4 +26,5 @@
 .strechButton {
   width: 100%;
   justify-content: center;
+  max-inline-size: unset;
 }
