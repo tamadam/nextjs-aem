@@ -1,0 +1,36 @@
+.gridContainer {
+  display: grid;
+  --gap: 2rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      min(
+        max(
+          100% / var(--max-column-count) - var(--gap),
+          var(--ideal-column-size)
+        ),
+        100%
+      ),
+      1fr
+    )
+  );
+  grid-gap: var(--gap);
+  gap: var(--gap);
+}
+
+// Margin block
+.verticalSpacingNone {
+  margin-block: 0;
+}
+
+.verticalSpacingSmall {
+  margin-block: 16px;
+}
+
+.verticalSpacingMedium {
+  margin-block: 24px;
+}
+
+.verticalSpacingLarge {
+  margin-block: 32px;
+}

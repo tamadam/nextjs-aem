@@ -5,7 +5,7 @@ import styles from "./FlexContainer.module.scss";
 
 const FlexContainer = ({ data }: any) => {
   const path = data[":path"];
-  console.log(data);
+
   const {
     "flex-direction": flexDirection = "row",
     "flex-wrap": flexWrap = "nowrap",

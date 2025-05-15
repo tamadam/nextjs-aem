@@ -270,5 +270,80 @@
         ]
       }
     ]
+  },
+  {
+    "id": "gridcontainer",
+    "fields": [
+      {
+        "component": "container",
+        "valueType": "string",
+        "label": "Grid Config",
+        "description": "The grid layout is controlled by three properties. These work together to create a flexible, responsive layout.",
+        "name": "gridConfig",
+        "collapsible": false,
+        "fields": [
+          {
+            "component": "select",
+            "name": "ideal-column-size",
+            "value": "20rem",
+            "label": "Ideal Column Size",
+            "description": "Defines the preferred width of each column",
+            "valueType": "string",
+            "options": [
+              { "name": "Small", "value": "10rem" },
+              { "name": "Medium", "value": "20rem" },
+              { "name": "Large", "value": "30rem" }
+            ]
+          },
+          {
+            "component": "number",
+            "name": "max-column-count",
+            "value": 3,
+            "label": "Max Column Count",
+            "description": "Sets the upper limit of columns shown side by side.",
+            "valueType": "number",
+            "validation": {
+              "numberMin": 0,
+              "numberMax": 20
+            }
+          },
+          {
+            "component": "select",
+            "name": "item-gap",
+            "value": "0rem",
+            "label": "Item Gap",
+            "description": "Controls the spacing between columns.",
+            "valueType": "string",
+            "options": [
+              { "name": "None", "value": "0rem" },
+              { "name": "Small", "value": "1rem" },
+              { "name": "Medium", "value": "3rem" },
+              { "name": "Large", "value": "6rem" }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "valueType": "string",
+        "label": "Other Styles",
+        "name": "gridConfigStyles",
+        "fields": [
+          {
+            "component": "select",
+            "name": "vertical-spacing",
+            "value": "none",
+            "label": "Vertical Spacing",
+            "valueType": "string",
+            "options": [
+              { "name": "None", "value": "none" },
+              { "name": "Small", "value": "small" },
+              { "name": "Medium", "value": "medium" },
+              { "name": "Large", "value": "large" }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

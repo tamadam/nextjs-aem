@@ -24,6 +24,25 @@
           }
         },
         {
+          "title": "Link",
+          "id": "link",
+          "plugins": {
+            "aem": {
+              "page": {
+                "resourceType": "demo-app/components/link",
+                "template": {
+                  "label": "Link",
+                  "href": "#",
+                  "openInNewTab": true,
+                  "type": "link",
+                  "link-variant": "default",
+                  "button-type": "default"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Richtext",
           "id": "richtext",
           "plugins": {
@@ -37,9 +56,15 @@
               }
             }
           }
-        },
+        }
+      ]
+    },
+    {
+      "title": "Container Components",
+      "id": "advanced",
+      "components": [
         {
-          "title": "FlexContainer",
+          "title": "Flex Container",
           "id": "flexcontainer",
           "plugins": {
             "aem": {
@@ -56,27 +81,18 @@
               }
             }
           }
-        }
-      ]
-    },
-    {
-      "title": "Advanced Components",
-      "id": "advanced",
-      "components": [
+        },
         {
-          "title": "Link",
-          "id": "link",
+          "title": "Grid Container",
+          "id": "gridcontainer",
           "plugins": {
             "aem": {
               "page": {
-                "resourceType": "demo-app/components/link",
+                "resourceType": "demo-app/components/gridcontainer",
                 "template": {
-                  "label": "Link",
-                  "href": "#",
-                  "openInNewTab": true,
-                  "type": "link",
-                  "link-variant": "default",
-                  "button-type": "default"
+                  "ideal-column-size": "20rem",
+                  "max-column-count": 3,
+                  "item-gap": "0rem"
                 }
               }
             }
