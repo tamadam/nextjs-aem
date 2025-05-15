@@ -57,6 +57,19 @@
           { "name": "Lowercase", "value": "lowercase" },
           { "name": "Uppercase", "value": "uppercase" }
         ]
+      },
+      {
+        "component": "select",
+        "name": "vertical-spacing",
+        "value": "none",
+        "label": "Vertical Spacing",
+        "valueType": "string",
+        "options": [
+          { "name": "None", "value": "none" },
+          { "name": "Small", "value": "small" },
+          { "name": "Medium", "value": "medium" },
+          { "name": "Large", "value": "large" }
+        ]
       }
     ]
   },
@@ -228,6 +241,32 @@
           { "name": "Space Between", "value": "spaceBetween" },
           { "name": "Space Around", "value": "spaceAround" },
           { "name": "Space Evenly", "value": "spaceEvenly" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "item-gap",
+        "value": "none",
+        "label": "Item Gap",
+        "valueType": "string",
+        "options": [
+          { "name": "None", "value": "none" },
+          { "name": "Small", "value": "small" },
+          { "name": "Medium", "value": "medium" },
+          { "name": "Large", "value": "large" }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "vertical-spacing",
+        "value": "none",
+        "label": "Vertical Spacing",
+        "valueType": "string",
+        "options": [
+          { "name": "None", "value": "none" },
+          { "name": "Small", "value": "small" },
+          { "name": "Medium", "value": "medium" },
+          { "name": "Large", "value": "large" }
         ]
       }
     ]

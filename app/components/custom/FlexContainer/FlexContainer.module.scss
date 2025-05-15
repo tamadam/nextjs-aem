@@ -81,3 +81,37 @@
 .justifyContentSpaceEvenly {
   justify-content: space-evenly;
 }
+
+// Flex gap
+.itemGapNone {
+  gap: 0;
+}
+
+.itemGapSmall {
+  gap: 8px;
+}
+
+.itemGapMedium {
+  gap: 16px;
+}
+
+.itemGapLarge {
+  gap: 24px;
+}
+
+// Margin block
+.verticalSpacingNone {
+  margin-block: 0;
+}
+
+.verticalSpacingSmall {
+  margin-block: 16px;
+}
+
+.verticalSpacingMedium {
+  margin-block: 24px;
+}
+
+.verticalSpacingLarge {
+  margin-block: 32px;
+}

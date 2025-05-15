@@ -26,4 +26,21 @@
   &.uppercase {
     text-transform: uppercase;
   }
+
+  // Margin block
+  &.verticalSpacingNone {
+    margin-block: 0;
+  }
+
+  &.verticalSpacingSmall {
+    margin-block: 16px;
+  }
+
+  &.verticalSpacingMedium {
+    margin-block: 24px;
+  }
+
+  &.verticalSpacingLarge {
+    margin-block: 32px;
+  }
 }

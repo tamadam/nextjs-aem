@@ -10,6 +10,7 @@ const TitleComponent = ({ data }: any) => {
     weight = "normal",
     color = "charcoal",
     "text-transform": textTransform = "none",
+    "vertical-spacing": verticalSpacing = "none",
   } = data;
   const classes = clsx({
     // Base class
@@ -26,6 +27,12 @@ const TitleComponent = ({ data }: any) => {
     // Font transform
     [styles.lowercase]: textTransform === "lowercase",
     [styles.uppercase]: textTransform === "uppercase",
+
+    // Margin block
+    [styles.verticalSpacingNone]: verticalSpacing === "none",
+    [styles.verticalSpacingSmall]: verticalSpacing === "small",
+    [styles.verticalSpacingMedium]: verticalSpacing === "medium",
+    [styles.verticalSpacingLarge]: verticalSpacing === "large",
   });
 
   const TitleTag = type;

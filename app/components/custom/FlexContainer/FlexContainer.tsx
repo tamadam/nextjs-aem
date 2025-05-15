@@ -11,6 +11,8 @@ const FlexContainer = ({ data }: any) => {
     "flex-wrap": flexWrap = "nowrap",
     "flex-align": flexAlign = "stretch",
     "flex-justify": flexJustify = "flexStart",
+    "item-gap": itemGap = "none",
+    "vertical-spacing": verticalSpacing = "none",
   } = data;
   const classes = clsx({
     // Base class
@@ -42,6 +44,18 @@ const FlexContainer = ({ data }: any) => {
     [styles.justifyContentSpaceBetween]: flexJustify === "spaceBetween",
     [styles.justifyContentSpaceAround]: flexJustify === "spaceAround",
     [styles.justifyContentSpaceEvenly]: flexJustify === "spaceEvenly",
+
+    // Flex gap
+    [styles.itemGapNone]: itemGap === "none",
+    [styles.itemGapSmall]: itemGap === "small",
+    [styles.itemGapMedium]: itemGap === "medium",
+    [styles.itemGapLarge]: itemGap === "large",
+
+    // Margin block
+    [styles.verticalSpacingNone]: verticalSpacing === "none",
+    [styles.verticalSpacingSmall]: verticalSpacing === "small",
+    [styles.verticalSpacingMedium]: verticalSpacing === "medium",
+    [styles.verticalSpacingLarge]: verticalSpacing === "large",
   });
 
   return (
