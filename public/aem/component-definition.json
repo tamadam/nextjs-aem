@@ -71,7 +71,8 @@
                 "resourceType": "demo-app/components/richtext",
                 "template": {
                   "text": "Richtext",
-                  "color": "black"
+                  "color": "black",
+                  "vertical-spacing": "none"
                 }
               }
             }

@@ -266,6 +266,20 @@
           { "name": "Light Grey", "value": "lightgrey" },
           { "name": "Digital Green", "value": "niDigitalGreen" }
         ]
+      },
+      {
+        "component": "select",
+        "name": "vertical-spacing",
+        "value": "none",
+        "label": "Vertical Spacing",
+        "valueType": "string",
+        "options": [
+          { "name": "None", "value": "none" },
+          { "name": "Very Small", "value": "verysmall" },
+          { "name": "Small", "value": "small" },
+          { "name": "Medium", "value": "medium" },
+          { "name": "Large", "value": "large" }
+        ]
       }
     ]
   },

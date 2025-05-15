@@ -14,4 +14,25 @@
   &.niDigitalGreen {
     color: #006c46;
   }
+
+  // Margin block
+  &.verticalSpacingNone {
+    margin-block: 0;
+  }
+
+  &.verticalSpacingVerySmall {
+    margin-block: 8px;
+  }
+
+  &.verticalSpacingSmall {
+    margin-block: 16px;
+  }
+
+  &.verticalSpacingMedium {
+    margin-block: 24px;
+  }
+
+  &.verticalSpacingLarge {
+    margin-block: 32px;
+  }
 }
