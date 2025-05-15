@@ -6,6 +6,22 @@ import Container from "../components/Container";
 import { notFound } from "next/navigation";
 import Selector from "../components/selectorstatic/Selector";
 
+import { Metadata } from "next";
+import { formatTitleFromSlug } from "@/lib/format-page-title";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug?: string[] };
+}): Promise<Metadata> {
+  const slugPath = params.slug?.join("/") || "home";
+  const title = formatTitleFromSlug(slugPath);
+
+  return {
+    title,
+  };
+}
+
 export default async function Page({
   params,
   searchParams,
