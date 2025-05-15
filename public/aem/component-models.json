@@ -160,6 +160,14 @@
                   { "name": "Secondary", "value": "secondary" },
                   { "name": "Tertiary", "value": "tertiary" }
                 ]
+              },
+              {
+                "component": "boolean",
+                "valueType": "boolean",
+                "value": false,
+                "name": "fullWidth",
+                "label": "Full Width",
+                "description": "Stretch the button to fill the available horizontal space."
               }
             ]
           }

@@ -36,7 +36,8 @@
                   "openInNewTab": true,
                   "type": "link",
                   "link-variant": "default",
-                  "button-type": "default"
+                  "button-type": "default",
+                  "fullWidth": false
                 }
               }
             }

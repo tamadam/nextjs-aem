@@ -22,3 +22,8 @@
   all: unset;
   display: block;
 }
+
+.strechButton {
+  width: 100%;
+  justify-content: center;
+}

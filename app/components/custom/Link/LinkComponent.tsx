@@ -16,6 +16,7 @@ const LinkComponent = ({ data }: any) => {
     openInNewTab = false,
     "link-variant": linkVariant = "default",
     "button-type": buttonType = "default",
+    fullWidth = false,
   } = data;
 
   const target = openInNewTab ? "_blank" : undefined;
@@ -31,6 +32,9 @@ const LinkComponent = ({ data }: any) => {
   });
 
   if (type === "button") {
+    const buttonClasses = clsx({
+      [styles.strechButton]: fullWidth,
+    });
     return (
       <Button
         kind={buttonType !== "default" ? buttonType : undefined}
@@ -38,6 +42,7 @@ const LinkComponent = ({ data }: any) => {
         data-aue-type="component"
         data-aue-model="link"
         data-aue-label="Link"
+        className={buttonClasses}
       >
         <a href={href} target={target} className={styles.linkAsButton}>
           {label}
