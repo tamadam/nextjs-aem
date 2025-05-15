@@ -10,6 +10,7 @@
   align-items: center;
   gap: clamp(1rem, 5vw, 4rem);
   font-family: "FoundersGrotesk", "Helvetica", Arial, sans-serif;
+  overflow: hidden;
 
   .selectorTitle {
     color: #161616;
