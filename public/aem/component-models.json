@@ -219,7 +219,8 @@
         "options": [
           { "name": "Default", "value": "black" },
           { "name": "Charcoal", "value": "charcoal" },
-          { "name": "Digital Green", "value": "niDigitalGreen" }
+          { "name": "Digital Green", "value": "niDigitalGreen" },
+          { "name": "Dark Green", "value": "niDarkGreen" }
         ]
       },
       {

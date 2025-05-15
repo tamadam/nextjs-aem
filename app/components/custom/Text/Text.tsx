@@ -25,6 +25,7 @@ const Text = ({ data }: any) => {
     // Font colors
     [styles.charcoal]: color === "charcoal",
     [styles.niDigitalGreen]: color === "niDigitalGreen",
+    [styles.niDarkGreen]: color === "niDarkGreen",
 
     // Font transform
     [styles.lowercase]: textTransform === "lowercase",
