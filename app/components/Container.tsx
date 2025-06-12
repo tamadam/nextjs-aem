@@ -1,13 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import styles from "./Container.module.scss";
-
 import DynamicComponent from "./DynamicComponent";
 
 const Container = ({ data, baseContainerPath }: any) => {
   return (
     <div
-      className={styles.mainContainer}
       data-aue-type="container"
       data-aue-label="Container"
       data-aue-resource={`urn:aemconnection:${baseContainerPath}`}

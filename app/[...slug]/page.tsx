@@ -2,12 +2,14 @@
 export const dynamic = "force-dynamic";
 
 import { getAemData, getContainerPath } from "@/lib/aem-service";
-import Container from "../components/Container";
 import { notFound } from "next/navigation";
 import Selector from "../components/selectorstatic/Selector";
 
 import { Metadata } from "next";
 import { formatTitleFromSlug } from "@/lib/format-page-title";
+import { defaultTemplate, templateMap } from "@/lib/template-map";
+
+import styles from "./page.module.scss";
 
 export async function generateMetadata({
   params,
@@ -44,13 +46,17 @@ export default async function Page({
     return <div>Something went wrong while fetching the page.</div>; // fallback UI
   }
 
+  const Template = templateMap[result.data.template] || defaultTemplate;
+
   return (
     <div>
       <Selector />
-      <Container
-        data={result.data.container}
-        baseContainerPath={containerPath}
-      />
+      <div className={styles.pageWrapper}>
+        <Template
+          data={result.data.container}
+          baseContainerPath={containerPath}
+        />
+      </div>
     </div>
   );
 }

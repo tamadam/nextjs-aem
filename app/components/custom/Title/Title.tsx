@@ -2,8 +2,9 @@ import clsx from "clsx";
 import styles from "./Title.module.scss";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const TitleComponent = ({ data }: any) => {
+const TitleComponent = ({ data, isPartOfTemplate = false }: any) => {
   const path = data[":path"];
+
   const {
     title,
     type = "h2",
@@ -36,16 +37,16 @@ const TitleComponent = ({ data }: any) => {
   });
 
   const TitleTag = type;
-  return (
-    <TitleTag
-      className={classes}
-      dangerouslySetInnerHTML={title ? { __html: title } : null}
-      data-aue-resource={`urn:aemconnection:${path}`}
-      data-aue-type="component"
-      data-aue-label="Title"
-      data-aue-model="title"
-    />
-  );
+  const titleProps = {
+    className: classes,
+    dangerouslySetInnerHTML: title ? { __html: title } : undefined,
+    "data-aue-resource": `urn:aemconnection:${path}`,
+    "data-aue-label": "Title",
+    "data-aue-model": "title",
+    ...(!isPartOfTemplate && { "data-aue-type": "component" }),
+  };
+
+  return <TitleTag {...titleProps} />;
 };
 
 export default TitleComponent;
