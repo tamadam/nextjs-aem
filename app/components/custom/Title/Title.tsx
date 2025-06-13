@@ -2,7 +2,7 @@ import clsx from "clsx";
 import styles from "./Title.module.scss";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const TitleComponent = ({ data, isPartOfTemplate = false }: any) => {
+const TitleComponent = ({ data, isLocked = false }: any) => {
   const path = data[":path"];
 
   const {
@@ -43,7 +43,7 @@ const TitleComponent = ({ data, isPartOfTemplate = false }: any) => {
     "data-aue-resource": `urn:aemconnection:${path}`,
     "data-aue-label": "Title",
     "data-aue-model": "title",
-    ...(!isPartOfTemplate && { "data-aue-type": "component" }),
+    ...(!isLocked && { "data-aue-type": "component" }),
   };
 
   return <TitleTag {...titleProps} />;

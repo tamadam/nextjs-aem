@@ -14,7 +14,20 @@ const FlexTemplate = ({ data, baseContainerPath }: any) => {
 
   return (
     <>
-      <TitleComponent data={titleNode} isPartOfTemplate />
+      <div>
+        <p
+          style={{
+            marginBlock: "1rem",
+            padding: "1rem",
+            border: "1px dotted blue",
+          }}
+        >
+          This is static content inside FlexTemplate served by Next.js to test
+          the immutable page structure. It cannot be edited using the Universal
+          Editor
+        </p>
+      </div>
+      <TitleComponent data={titleNode} isLocked />
       <FlexContainer data={flexContainer} />
     </>
   );
