@@ -125,7 +125,7 @@
             "label": "Link configuration",
             "name": "link-config",
             "valueType": "string",
-            "condition": { "===": [{ "var": "type" }, "link"] },
+            "condition": { "===": [{ "var": "baseConfig.type" }, "link"] },
             "fields": [
               {
                 "component": "select",
@@ -145,7 +145,7 @@
             "label": "Button configuration",
             "name": "button-config",
             "valueType": "string",
-            "condition": { "===": [{ "var": "type" }, "button"] },
+            "condition": { "===": [{ "var": "baseConfig.type" }, "button"] },
             "fields": [
               {
                 "component": "select",
