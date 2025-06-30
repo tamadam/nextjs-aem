@@ -100,6 +100,19 @@
             "valueType": "boolean",
             "name": "openInNewTab",
             "label": "Open link in New Tab"
+          },
+          {
+            "component": "boolean",
+            "label": "Shall the text field be revealed?",
+            "name": "reveal",
+            "valueType": "boolean"
+          },
+          {
+            "component": "text-input",
+            "label": "Hidden text field",
+            "name": "hidden-text",
+            "valueType": "string",
+            "condition": { "===": [{"var" : "reveal"}, true] }
           }
         ]
       },
@@ -119,19 +132,6 @@
               { "name": "Link", "value": "link" },
               { "name": "Button", "value": "button" }
             ]
-          },
-          {
-            "component": "boolean",
-            "label": "Shall the text field be revealed?",
-            "name": "reveal",
-            "valueType": "boolean"
-          },
-          {
-            "component": "text-input",
-            "label": "Hidden text field",
-            "name": "hidden-text",
-            "valueType": "string",
-            "condition": { "===": [{"var" : "reveal"}, true] }
           }
         ]
       }
