@@ -121,24 +121,17 @@
             ]
           },
           {
-            "component": "container",
-            "label": "Link configuration",
-            "name": "link-config",
+            "component": "boolean",
+            "label": "Shall the text field be revealed?",
+            "name": "reveal",
+            "valueType": "boolean"
+          },
+          {
+            "component": "text-input",
+            "label": "Hidden text field",
+            "name": "hidden-text",
             "valueType": "string",
-            "condition": { "===": [{ "var": "type" }, "link"] },
-            "fields": [
-              {
-                "component": "select",
-                "label": "Link variant",
-                "name": "link-variant",
-                "valueType": "string",
-                "value": "default",
-                "options": [
-                  { "name": "Default", "value": "default" },
-                  { "name": "Quiet", "value": "quiet" }
-                ]
-              }
-            ]
+            "condition": { "===": [{"var" : "reveal"}, true] }
           }
         ]
       }
