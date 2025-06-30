@@ -100,19 +100,6 @@
             "valueType": "boolean",
             "name": "openInNewTab",
             "label": "Open link in New Tab"
-          },
-          {
-            "component": "boolean",
-            "label": "Shall the text field be revealed?",
-            "name": "reveal",
-            "valueType": "boolean"
-          },
-          {
-            "component": "text-input",
-            "label": "Hidden text field",
-            "name": "hidden-text",
-            "valueType": "string",
-            "condition": { "===": [{"var" : "reveal"}, true] }
           }
         ]
       },
@@ -131,6 +118,57 @@
             "options": [
               { "name": "Link", "value": "link" },
               { "name": "Button", "value": "button" }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Link configuration",
+            "name": "link-config",
+            "valueType": "string",
+            "condition": { "===": [{ "var": "type" }, "link"] },
+            "fields": [
+              {
+                "component": "select",
+                "label": "Link variant",
+                "name": "link-variant",
+                "valueType": "string",
+                "value": "default",
+                "options": [
+                  { "name": "Default", "value": "default" },
+                  { "name": "Quiet", "value": "quiet" }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "container",
+            "label": "Button configuration",
+            "name": "button-config",
+            "valueType": "string",
+            "condition": { "===": [{ "var": "type" }, "button"] },
+            "fields": [
+              {
+                "component": "select",
+                "label": "Button Type",
+                "name": "button-type",
+                "valueType": "string",
+                "value": "primary",
+                "options": [
+                  { "name": "Default", "value": "default" },
+                  { "name": "Danger", "value": "danger" },
+                  { "name": "Ghost", "value": "ghost" },
+                  { "name": "Secondary", "value": "secondary" },
+                  { "name": "Tertiary", "value": "tertiary" }
+                ]
+              },
+              {
+                "component": "boolean",
+                "valueType": "boolean",
+                "value": false,
+                "name": "fullWidth",
+                "label": "Full Width",
+                "description": "Stretch the button to fill the available horizontal space."
+              }
             ]
           }
         ]
